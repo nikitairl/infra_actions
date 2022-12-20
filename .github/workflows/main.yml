@@ -61,7 +61,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.SERVER_PASSWORD }} # Если ваш ssh-ключ защищён фразой-паролем
+        passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull nikitairl/infra_actions
