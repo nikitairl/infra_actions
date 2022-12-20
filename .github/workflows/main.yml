@@ -27,7 +27,7 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
 
-build_and_push_to_docker_hub:
+  build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     needs: tests
@@ -51,7 +51,7 @@ build_and_push_to_docker_hub:
           push: true
           tags: nikitairl/infra_actions:latest
 
-deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:
